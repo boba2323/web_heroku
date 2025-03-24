@@ -11,6 +11,7 @@ from sqlalchemy import Integer, String, Text
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
+from dotenv import load_dotenv
 # Optional: add contact me email functionality (Day 60)
 # import smtplib
 
@@ -30,7 +31,9 @@ This will install the packages from the requirements.txt for this project.
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv("the_key")
+load_dotenv()
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
+print(os.getenv("SECRET_KEY"))
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
@@ -304,4 +307,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5001)
+    app.run(debug=True, port=5001)
