@@ -12,14 +12,13 @@ This is a Flask-based web application.
 
 - Python 3.7 or higher
 - Flask
-- Make sure to add an .env file with your SECRET_KEY in it.
+- Make sure to make an .env file in the working directory with your SECRET_KEY in it.
 
 ## Installation
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
+    git clone https://github.com/boba2323/web_heroku.git
     ```
 
 2. Create a virtual environment:
@@ -37,7 +36,7 @@ This is a Flask-based web application.
 
 1. Run the application:
     ```bash
-    flask run
+    python main.py
     ```
 
 2. Open your browser and navigate to:
